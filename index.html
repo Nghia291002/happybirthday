@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Thiệp Mời Sinh Nhật</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia", sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #333;
+            text-align: center;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .balloon-left, .balloon-right {
+            position: absolute;
+            bottom: -150px; /* Bắt đầu từ dưới cùng của trang */
+            width: 100px;
+            animation: moveUp 8s infinite ease-in-out;
+        }
+
+        .balloon-left {
+            left: 10px;
+            animation-delay: 0s; /* Để bóng bay trái và phải không cùng lúc */
+        }
+
+        .balloon-right {
+            right: 10px;
+            animation-delay: 2s;
+        }
+
+        @keyframes moveUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-1200px); /* Di chuyển lên trên */
+            }
+        }
+
+        .card {
+            background-color: white;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .card h1 {
+            font-size: 3em;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        .schedule {
+            margin-top: 30px;
+        }
+
+        .schedule-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .schedule-item div {
+            margin-left: 15px;
+        }
+
+        .time {
+            font-size: 1.2em;
+            color: #ff6f61;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+
+        .details {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e85a50;
+        }
+    </style>
+</head>
+<body>
+    <i class="balloon-left">Love</i>
+    <i class="balloon-right">Bủm yêu</i>
+
+    <div class="card">
+        <h1>HAPPY BIRTHDAY</h1>
+        <h2>Kính mời: Bé Linh Đan </h2>
+        <p>Mừng Bé thêm một tuổi mới, sau đây là lịch trình tổ chức sinh nhật dành cho em </p>
+
+        <div class="img-container">
+            <img src="https://media1.giphy.com/media/qnWjDNWHm9Wy1zLwG8/giphy.gif?cid=6c09b952bnk2olpbl36igx1ukwuazrjdeiszk4yap7090j8b&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Birthday Celebration">
+        </div>
+
+        <h2>Lịch trình :</h2>
+        <div class="schedule">
+            <div class="schedule-item">
+                <div class="time">18:00</div>
+                <div class="details">Đón bé Linh Đan và bé Đậu</div>
+            </div>
+            <div class="schedule-item">
+                <div class="time">18:30</div>
+                <div class="details">Di chuyển tới quán ăn</div>
+            </div>
+            <div class="schedule-item">
+                <div class="time">19:00</div>
+                <div class="details">Dùng bữa tối tại Gogi House</div>
+            </div>
+            <div class="schedule-item">
+                <div class="time">20:30</div>
+                <div class="details">Thổi bánh kem và tráng miệng tại B&B Barkery</div>
+            </div>
+            <div class="schedule-item">
+                <div class="time">22:00</div>
+                <div class="details">Kết thúc buổi tiệc</div>
+            </div>
+        </div>
+
+        <p>Vui lòng xác nhận sự tham gia của Bé !!!!!!!!</p>
+
+        <a href="thankyou.html" class="btn">Xác nhận tham dự</a>
+    </div>
+
+</body>
+</html>

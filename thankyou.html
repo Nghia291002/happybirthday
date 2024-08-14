@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Xác nhận thành công</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia", sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .message {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            color: #ff6f61;
+        }
+
+        .message h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .message p {
+            font-size: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e85a50;
+        }
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .fireworks .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            animation: explode 1.5s ease-out infinite;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .firework:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .firework:nth-child(2) {
+            top: 30%;
+            left: 50%;
+            animation-delay: 0.5s;
+        }
+
+        .firework:nth-child(3) {
+            top: 50%;
+            left: 70%;
+            animation-delay: 1s;
+        }
+        .heart-balloon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: floatUp 6s infinite;
+        }
+
+        .heart-balloon::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: red;
+            top: -30px;
+            left: -15px;
+            transform: rotate(-45deg);
+            z-index: -1;
+        }
+
+        .heart-balloon::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: red;
+            top: -30px;
+            right: -15px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fireworks">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    </div>
+
+    <div class="message">
+        <h1>Xác nhận thành công!</h1>
+        <p>Cảm ơn Bé đã xác nhận tham dự buổi tiệc sinh nhật. Hẹn gặp lại em vào ngày maiiii!</p>
+        <a href="index.html" class="btn">Trở về trang chủ</a>
+    </div>
+    <div class="heart-balloon" style="top: 20px; left: 20px;"></div>
+    <div class="heart-balloon" style="top: 20px; right: 20px;"></div>
+</body>
+</html>
